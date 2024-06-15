@@ -34,17 +34,20 @@ form input, form button {
 }
 
 form button {
-    background-color: #ffd700; /* Жёлтая кнопка */
-    color: #1a1a1a; /* Чёрный текст */
+    background-color: transparent; /* Прозрачный фон кнопки */
     border: none;
     cursor: pointer;
-    border-radius: 5px; /* Скругление углов */
-    height: 50px; /* Высота кнопки */
     width: 100%; /* Ширина кнопки по ширине формы */
 }
 
+form button img {
+    display: block;
+    width: 100%; /* Растягиваем изображение на всю ширину кнопки */
+    border-radius: 50%; /* Делаем изображение круглым */
+}
+
 form button:hover {
-    background-color: #e6ac00; /* Жёлто-оранжевый при наведении */
+    background-color: #2b2b2b; /* Тёмный фон при наведении */
 }
 
 #admin-panel {
@@ -56,6 +59,6 @@ form button:hover {
     color: #fff; /* Белый текст в админ панели */
 }
 
-button {
+.action-btn {
     margin-bottom: 10px;
 }
