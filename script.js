@@ -13,21 +13,14 @@ document.getElementById('click-btn').addEventListener('click', function() {
     updateCoinCount();
 });
 
-// Переключение между кликером и улучшениями
-document.getElementById('upgrades-btn').addEventListener('click', function() {
-    // Прячем кликер, показываем улучшения
-    document.querySelector('.clicker').style.display = 'none';
-    document.querySelector('.improvements').innerHTML = `
-        <button id="back-btn" class="improvement-btn">Назад</button>
-        <p>Здесь будут улучшения</p>
-    `;
-    
-    // Обработчик кнопки "Назад"
-    document.getElementById('back-btn').addEventListener('click', function() {
-        // Показываем кликер, прячем улучшения
-        document.querySelector('.clicker').style.display = 'block';
-        document.querySelector('.improvements').innerHTML = `
-            <button id="upgrades-btn" class="improvement-btn">Улучшения</button>
-        `;
-    });
+// Обработчик применения промокода
+document.getElementById('promo-btn').addEventListener('click', function() {
+    let promoCode = document.getElementById('promo-input').value.trim().toLowerCase();
+    if (promoCode === 'your_promo_code_here') { // Замените на свой промокод
+        coinCount += 100; // Пример добавления монет за промокод
+        updateCoinCount();
+        alert('Промокод успешно применен!');
+    } else {
+        alert('Неверный промокод. Попробуйте еще раз.');
+    }
 });
