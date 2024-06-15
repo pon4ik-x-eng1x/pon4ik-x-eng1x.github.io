@@ -15,63 +15,38 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         // Показываем панель управления
         document.getElementById('login-form').style.display = 'none';
         document.getElementById('admin-panel').style.display = 'block';
-        
-        // Загружаем данные (для примера заглушка)
-        fetchUsers();
     } else {
         alert('Неверный логин или пароль');
     }
 });
 
-function fetchUsers() {
-    // Заглушка для загрузки данных (локальное хранение)
-    var users = JSON.parse(localStorage.getItem('users')) || [];
-    var adminContent = document.getElementById('admin-content');
-    adminContent.innerHTML = '';
+document.getElementById('list-users-btn').addEventListener('click', function() {
+    // Здесь можно добавить логику для отображения списка пользователей
+    alert('Функция "Список пользователей" ещё не реализована.');
+});
 
-    if (users.length === 0) {
-        adminContent.innerHTML = '<p>Пользователей пока нет.</p>';
-    } else {
-        var table = '<table><thead><tr><th>Логин</th><th>Монеты</th><th>Последний раз</th><th>Действия</th></tr></thead><tbody>';
-        users.forEach(function(user) {
-            table += '<tr>';
-            table += '<td>' + user.username + '</td>';
-            table += '<td>' + user.coins + '</td>';
-            table += '<td>' + user.lastLogin + '</td>';
-            table += '<td><button onclick="giveCoins(\'' + user.username + '\')">Выдать монеты</button>';
-            table += ' <button onclick="banUser(\'' + user.username + '\')">Забанить</button></td>';
-            table += '</tr>';
-        });
-        table += '</tbody></table>';
-        adminContent.innerHTML = table;
-    }
-}
+document.getElementById('grant-coins-btn').addEventListener('click', function() {
+    // Здесь можно добавить логику для выдачи монет пользователям
+    alert('Функция "Выдать монеты" ещё не реализована.');
+});
 
-function giveCoins(username) {
-    var users = JSON.parse(localStorage.getItem('users')) || [];
-    var foundUser = users.find(function(user) {
-        return user.username === username;
-    });
+document.getElementById('revoke-coins-btn').addEventListener('click', function() {
+    // Здесь можно добавить логику для снятия монет у пользователей
+    alert('Функция "Забрать монеты" ещё не реализована.');
+});
 
-    if (foundUser) {
-        // В данном примере увеличим монеты пользователя на 1000
-        foundUser.coins += 1000;
-        localStorage.setItem('users', JSON.stringify(users));
-        fetchUsers(); // Обновляем таблицу
-    }
-}
+document.getElementById('ban-user-btn').addEventListener('click', function() {
+    // Здесь можно добавить логику для блокировки пользователя
+    alert('Функция "Заблокировать пользователя" ещё не реализована.');
+});
 
-function banUser(username) {
-    var users = JSON.parse(localStorage.getItem('users')) || [];
-    var foundUser = users.find(function(user) {
-        return user.username === username;
-    });
+document.getElementById('unban-user-btn').addEventListener('click', function() {
+    // Здесь можно добавить логику для разблокировки пользователя
+    alert('Функция "Разблокировать пользователя" ещё не реализована.');
+});
 
-    if (foundUser) {
-        foundUser.banned = true;
-        foundUser.banReason = 'Не указана причина';
-        localStorage.setItem('users', JSON.stringify(users));
-        fetchUsers(); // Обновляем таблицу
-        alert('Пользователь ' + username + ' забанен.');
-    }
-}
+document.getElementById('logout-btn').addEventListener('click', function() {
+    // Выход из административной панели
+    document.getElementById('admin-panel').style.display = 'none';
+    document.getElementById('login-form').style.display = 'block';
+});

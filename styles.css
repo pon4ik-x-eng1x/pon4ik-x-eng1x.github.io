@@ -2,7 +2,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #1a1a1a; /* Чёрный фон */
+    color: #ffd700; /* Цвет текста жёлтый */
     margin: 0;
     padding: 0;
 }
@@ -10,10 +11,10 @@ body {
 .admin-container {
     max-width: 800px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный чёрный фон */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 h1, h2 {
@@ -33,14 +34,17 @@ form input, form button {
 }
 
 form button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ffd700; /* Жёлтая кнопка */
+    color: #1a1a1a; /* Чёрный текст */
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* Скругление углов */
+    height: 50px; /* Высота кнопки */
+    width: 100%; /* Ширина кнопки по ширине формы */
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #e6ac00; /* Жёлто-оранжевый при наведении */
 }
 
 #admin-panel {
@@ -49,32 +53,9 @@ form button:hover {
 
 #admin-content {
     margin-top: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
+    color: #fff; /* Белый текст в админ панели */
 }
 
 button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
+    margin-bottom: 10px;
 }
