@@ -8,22 +8,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Добро пожаловать в t2x2 coin!</h1>
-        <div class="tabs">
-            <button class="tab-link active" onclick="openTab(event, 'clicker-tab')">Кликер</button>
-            <button class="tab-link" onclick="openTab(event, 'upgrades-tab')">Улучшения</button>
+        <div class="top-bar">
+            <p>Количество монет: <span id="coin-count">0</span></p>
         </div>
-        <div id="clicker-tab" class="tab-content active">
-            <div class="clicker">
-                <button id="click-button"><img id="button-img" src="images/0.jpg" alt="Click Button"></button>
-                <p>Монет: <span id="coin-count">0</span></p>
-                <p>Энергия: <span id="energy-count">100</span></p>
-            </div>
+        <div class="clicker">
+            <button id="click-btn" class="click-btn"><img src="images/button_click.jpg" alt="Кнопка кликера"></button>
         </div>
-        <div id="upgrades-tab" class="tab-content">
-            <h2>Улучшения</h2>
-            <button id="upgrade-click">Улучшить клики (Стоимость: <span id="click-upgrade-cost">10</span> монет)</button>
-            <button id="upgrade-afk">Улучшить AFK (Стоимость: <span id="afk-upgrade-cost">50</span> монет)</button>
+        <div class="improvements">
+            <button id="upgrades-btn" class="improvement-btn">Улучшения</button>
         </div>
     </div>
     <script src="script.js"></script>
