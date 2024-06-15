@@ -8,7 +8,7 @@ body {
 }
 
 .admin-container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
@@ -51,6 +51,30 @@ form button:hover {
     margin-top: 20px;
 }
 
-#admin-content p {
-    margin-bottom: 10px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
