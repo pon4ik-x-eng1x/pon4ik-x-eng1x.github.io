@@ -2,67 +2,55 @@
 
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
     background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    background: #fff;
+.admin-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
     text-align: center;
 }
 
-h1 {
-    font-size: 2em;
+form {
     margin-bottom: 20px;
 }
 
-.clicker {
-    margin-bottom: 20px;
+form input, form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-#click-button {
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border: none;
+form button {
     background-color: #4CAF50;
     color: white;
+    border: none;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-#click-button:hover {
+form button:hover {
     background-color: #45a049;
 }
 
-.upgrades {
+#admin-panel {
+    display: none;
+}
+
+#admin-content {
     margin-top: 20px;
 }
 
-button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 1em;
-    border: none;
-    background-color: #008CBA;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #007B9E;
-}
-
-p {
-    font-size: 1.5em;
-    margin: 10px 0;
+#admin-content p {
+    margin-bottom: 10px;
 }

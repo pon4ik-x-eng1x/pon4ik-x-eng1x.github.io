@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрирование t2x2 coin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Администрирование t2x2 coin</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Логин" required>
+            <input type="password" id="password" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+        </form>
+        <div id="admin-panel" style="display: none;">
+            <h2>Панель управления</h2>
+            <div id="admin-content"></div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
